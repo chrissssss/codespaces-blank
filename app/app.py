@@ -1,6 +1,6 @@
 import subprocess
 
-user="user"
+user="test"
 host="ssh"
 cmd='date'
 

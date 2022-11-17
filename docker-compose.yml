@@ -4,13 +4,11 @@ services:
   myapp:
     image: myapp
     build:
-      context: app
-      dockerfile: ./Dockerfile
+      dockerfile: app/Dockerfile
     links: 
       - "mysshserver"
 
   mysshserver:
     image: mysshserver
     build:
-      context: ssh
-      dockerfile: ./Dockerfile
+      dockerfile: ssh/Dockerfile
