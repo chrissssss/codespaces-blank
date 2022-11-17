@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  codespacesblank:
+    image: codespacesblank
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    links: 
+      - "ssh"
+
+  ssh:
+    image: mysshserver
+    build:
+      context: ssh
+      dockerfile: ./Dockerfile
