@@ -1,0 +1,2 @@
+docker run -it --entrypoint /bin/bash myapp
+docker exec -it b37912e41ca6 /bin/bash

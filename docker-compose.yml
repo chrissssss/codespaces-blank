@@ -1,14 +1,13 @@
 version: '3.4'
 
 services:
-  myapp:
-    image: myapp
-    build:
-      dockerfile: app/Dockerfile
-    links: 
-      - "mysshserver"
 
   mysshserver:
     image: mysshserver
     build:
       dockerfile: ssh/Dockerfile
+
+  myapp:
+    image: myapp
+    build:
+      dockerfile: app/Dockerfile
