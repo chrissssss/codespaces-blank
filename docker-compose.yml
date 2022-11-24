@@ -11,3 +11,5 @@ services:
     image: myapp
     build:
       dockerfile: app/Dockerfile
+    depends_on:
+      - mysshserver
