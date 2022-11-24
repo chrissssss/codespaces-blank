@@ -26,6 +26,8 @@ RUN adduser --home /home/appuser -u 5678 --disabled-password --gecos "" appuser 
 # Setup ssh public key
 COPY shared/ssh-keys/id_rsa /home/appuser/.ssh
 
+RUN chown appuser:appuser /home/appuser/.ssh/id_rsa 
+
 USER appuser
 
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
